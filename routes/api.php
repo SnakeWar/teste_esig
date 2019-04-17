@@ -20,3 +20,6 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::get('/products', function () {
     return ProductResource::collection(\App\Products::paginate(3));
 });
+Route::get('/product/{id}', function ($id) {
+    return new ProductResource(App\Products::findOrFail($id));
+});
