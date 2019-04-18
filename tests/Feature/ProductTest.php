@@ -18,5 +18,6 @@ class ProductTest extends TestCase
         $response = $this->get('/products');
 
         $response->assertStatus(200);
+        //teste
     }
 }
