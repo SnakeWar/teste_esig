@@ -1,0 +1,11 @@
+
+php artisan make:test ProductTest
+
+
+  $response = $this->get('/');
+
+        $response->assertStatus(200);
+
+
+vendor/bin/phpunit
+
